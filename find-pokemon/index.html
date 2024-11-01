@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI Interactive Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="press-start-2p-regular">Welcome to the PokeAPI Explorer</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2 class="press-start-2p-regular">Find Pokémon</h2>
+            <input type="text" id="pokemonInput" placeholder="Enter Pokémon name">
+            <button id="fetchButton">Fetch Pokémon</button>
+        </section>
+        
+        <section id="pokemonDisplay">
+            <!-- Dynamic content will appear here -->
+        </section>
+
+        <!-- Popup message display for adding Pokémon confirmation -->
+        <div id="popupMessage" class="popup-message"></div>
+
+        <!-- View My Team button in its own box -->
+        <section class="team-box">
+            <button id="viewTeamButton" onclick="navigateToTeam()">View My Team</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Data provided by <a href="https://pokeapi.co/">PokeAPI</a></p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        function navigateToTeam() {
+            window.location.href = "../view-my-team/index.html"; // Link to the View My Team page
+        }
+    </script>
+</body>
+</html>
